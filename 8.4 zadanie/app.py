@@ -4,15 +4,15 @@ from flask import request, redirect
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/mypage')
 def kotel0():
     return render_template('kotel0.html')
 
-@app.route('/kotel1')
+@app.route('/mypage/me')
 def kotel1():
     return render_template('kotel1.html')
 
-@app.route('/kotel2', methods=['GET', 'POST'])
+@app.route('/mypage/contact', methods=['GET', 'POST'])
 def kotel2():
    if request.method == 'GET':
        print("We received GET")
